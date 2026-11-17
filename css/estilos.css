@@ -66,6 +66,7 @@ nav {
 }
 
 .logo {
+  background-image:("img/logory.jpg");
   font-size: 27px;
   font-weight: 900;
   color: var(--#18005E);
