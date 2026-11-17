@@ -68,12 +68,12 @@ nav {
 .logo {
   font-size: 27px;
   font-weight: 900;
-  color: var(--oscuro);
+  color: var(--#18005E);
 }
 
 .logo span,
 h1 span {
-  color: var(--verde);
+  color: var(--#DE932A);
 }
 
 .enlaces {
