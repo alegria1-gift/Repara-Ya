@@ -66,18 +66,31 @@ nav {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
   background-image: url("img/logory.jpg");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left center;
+
+  text-decoration: none;
   font-size: 27px;
   font-weight: 900;
   color: #18005E;
 }
 
+.logo img {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+}
+
 .logo span {
   color: #DE932A;
 }
+
 .enlaces {
   display: flex;
   gap: 25px;
