@@ -66,12 +66,13 @@ nav {
 }
 
 .logo-texto {
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start;
     gap: 8px;
-    font-size: 27px;
+    width: fit-content;
+    font-size: 25px;
     font-weight: 800;
     color: #102d35;
     text-decoration: none;
@@ -80,17 +81,19 @@ nav {
 }
 
 .logo-icono {
-    width: 58px;
-    height: 58px;
-    color: #087e83;
+    display: block;
+    width: 48px;
+    height: 48px;
     flex-shrink: 0;
+    color: #087e83;
+}
+
+.logo-texto span {
+    display: inline-block;
+    line-height: 1;
 }
 
 .logo-texto strong {
-    color: #087e83;
-}
-
-.logo-texto:hover {
     color: #087e83;
 }
 
