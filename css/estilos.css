@@ -66,16 +66,29 @@ nav {
 }
 
 .logo-texto {
-    font-size: 25px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 28px;
     font-weight: 800;
     color: #102d35;
     text-decoration: none;
     letter-spacing: -1px;
 }
 
-.logo-texto:hover {
+.logo-icono {
+    width: 55px;
+    height: 55px;
+    color: #087e83;
+    flex-shrink: 0;
+}
+
+.logo-texto strong {
     color: #087e83;
 }
+
+.logo-texto:hover {
+    color: #087e83;
 }
 
 .enlaces {
