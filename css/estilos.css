@@ -65,10 +65,17 @@ nav {
   gap: 20px;
 }
 
-.logo img {
-  width: 140px;
-  height: auto;
-  object-fit: contain;
+.logo-texto {
+    font-size: 25px;
+    font-weight: 800;
+    color: #102d35;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.logo-texto:hover {
+    color: #087e83;
+}
 }
 
 .enlaces {
