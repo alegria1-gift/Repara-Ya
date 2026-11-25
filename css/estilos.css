@@ -66,19 +66,22 @@ nav {
 }
 
 .logo-texto {
-    display: flex;
+    display: inline-flex;
+    flex-direction: row;
     align-items: center;
-    gap: 9px;
-    font-size: 28px;
+    justify-content: center;
+    gap: 8px;
+    font-size: 27px;
     font-weight: 800;
     color: #102d35;
     text-decoration: none;
     letter-spacing: -1px;
+    white-space: nowrap;
 }
 
 .logo-icono {
-    width: 55px;
-    height: 55px;
+    width: 58px;
+    height: 58px;
     color: #087e83;
     flex-shrink: 0;
 }
