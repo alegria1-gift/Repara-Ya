@@ -1244,7 +1244,7 @@ textarea:focus {
     animation-duration: .01ms !important;
     /* BANNER PRINCIPAL REPARA YA */
 .banner-imagen-repara {
-    width: min(800px, 80%);
+    width: min(500px, 50%);
     margin: 25px auto 35px;
     overflow: hidden;
     border-radius: 24px;
@@ -1254,14 +1254,14 @@ textarea:focus {
 
 .banner-imagen-repara img {
     display: block;
-    width: 50%;
+    width: 30%;
     height: auto;
     object-fit: contain;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 200px) {
     .banner-imagen-repara {
-        width: 50%;
+        width: 30%;
         margin: 10px auto 20px;
         border-radius: 12px;
     }
