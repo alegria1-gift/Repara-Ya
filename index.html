@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#18005e">
+<meta name="theme-color" content="#102d35">
 <title>Repara Ya | Servicio técnico para tu hogar</title>
 
 <link rel="stylesheet" href="css/estilos.css">
@@ -18,54 +18,75 @@
 </div>
 
 <header>
-  <nav class="contenedor">
-   
-<svg class="logo-icono" viewBox="0 0 64 64"
-     fill="none" xmlns="http://www.w3.org/2000/svg"
-     role="img" aria-label="Casa con llave inglesa">
 
-  <!-- Techo de la casa -->
-  <path d="M7 29 L32 7 L57 29"
-        stroke="currentColor"
-        stroke-width="5.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"/>
+<nav class="contenedor">
 
-  <!-- Estructura de la casa -->
-  <path d="M13 27 V54 H51 V27"
-        stroke="currentColor"
-        stroke-width="5.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"/>
+  <a class="logo-texto" href="#inicio" aria-label="Repara Ya, ir al inicio">
 
-  <!-- Puerta -->
-  <path d="M25 54 V39 Q25 36 28 36 H36 Q39 36 39 39 V54"
-        stroke="currentColor"
-        stroke-width="4.5"
-        stroke-linejoin="round"/>
+    <svg class="logo-icono" viewBox="0 0 64 64"
+         fill="none" xmlns="http://www.w3.org/2000/svg"
+         role="img" aria-hidden="true">
 
-  <!-- Llave inglesa -->
-  <path d="M39 18
-           C35 21 35 26 39 29
-           L28 40
-           L24 45
-           L29 50
-           L34 45
-           L45 34
-           C49 38 54 34 55 30
-           L49 31
-           L46 26
-           L48 20
-           C45 18 42 17 39 18 Z"
-        fill="currentColor"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linejoin="round"/>
-</svg>
+      <!-- Techo -->
+      <path d="M7 29 L32 7 L57 29"
+            stroke="currentColor"
+            stroke-width="5.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
 
+      <!-- Casa -->
+      <path d="M13 27 V54 H51 V27"
+            stroke="currentColor"
+            stroke-width="5.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+
+      <!-- Puerta -->
+      <path d="M25 54 V39 Q25 36 28 36 H36 Q39 36 39 39 V54"
+            stroke="currentColor"
+            stroke-width="4.5"
+            stroke-linejoin="round"/>
+
+      <!-- Llave inglesa -->
+      <path d="M39 18
+               C35 21 35 26 39 29
+               L28 40
+               L24 45
+               L29 50
+               L34 45
+               L45 34
+               C49 38 54 34 55 30
+               L49 31
+               L46 26
+               L48 20
+               C45 18 42 17 39 18 Z"
+            fill="currentColor"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linejoin="round"/>
+    </svg>
 
     <span>Repara <strong>Ya</strong></span>
-</a>
+
+  </a>
+
+  <button class="menu" id="menu" aria-label="Abrir menú">☰</button>
+
+  <div class="enlaces" id="enlaces">
+    <a href="#inicio">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#empresa">Nosotros</a>
+    <a href="#historia">Nuestra historia</a>
+    <a href="#proceso">Cómo funciona</a>
+    <a href="#preguntas">Preguntas</a>
+  </div>
+
+  <button class="boton boton-nav" data-abrir>
+    Solicitar servicio
+  </button>
+
+</nav>
+
 
     <button class="menu" id="menu" aria-label="Abrir menú">☰</button>
 
