@@ -1177,49 +1177,186 @@ footer h3 {
 }
 
 
-/* Ajustes visuales Repara Ya */
+
+/* =====================================
+   AJUSTES GENERALES REPARA YA
+===================================== */
+
 ::selection {
-  background: #087e83;
-  color: #102d35;
+  background: var(--verde);
+  color: var(--blanco);
 }
 
 :focus-visible {
-  outline: 3px solid #087e83;
+  outline: 3px solid var(--verde);
   outline-offset: 3px;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: #087e83 !important;
+  border-color: var(--verde) !important;
   box-shadow: 0 0 0 3px #087e8320;
   outline: none;
 }
 
-.boton-pago {
-  background: #102d35;
-  color: #ffffff;
-  padding: 14px 22px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: 700;
-  display: inline-flex;
+/* =====================================
+   LOGO CASA + LLAVE
+===================================== */
+
+.logo-texto {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 8px;
-  transition: .2s ease;
+  justify-content: flex-start;
+  gap: 9px;
+  width: fit-content;
+  color: var(--oscuro);
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  white-space: nowrap;
+  line-height: 1;
 }
 
-.boton-pago:hover {
-  background: #087e83;
-  color: #102d35;
-  transform: translateY(-2px);
+.logo-icono {
+  display: block;
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  flex-shrink: 0;
+  color: var(--verde);
+  overflow: visible;
 }
+
+.logo-texto span {
+  display: inline-block;
+  line-height: 1;
+}
+
+.logo-texto strong {
+  color: var(--verde);
+}
+
+/* =====================================
+   PORTADA PRINCIPAL
+===================================== */
+
+.portada {
+  position: relative;
+  overflow: hidden;
+  padding: 75px 0 65px;
+  background:
+    radial-gradient(
+      circle at 90% 15%,
+      var(--menta) 0%,
+      transparent 35%
+    ),
+    var(--fondo);
+}
+
+.portada-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.portada-contenido {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+}
+
+.portada h1 {
+  color: var(--oscuro);
+  font-size: clamp(35px, 4.2vw, 55px);
+  line-height: 1.12;
+  letter-spacing: -1.8px;
+  margin: 24px 0;
+}
+
+.portada h1 span {
+  display: block;
+  color: var(--verde);
+}
+
+.portada-contenido > p {
+  color: var(--gris);
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 520px;
+}
+
+.portada .acciones {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 13px;
+  margin-top: 28px;
+}
+
+.portada .boton {
+  background: var(--verde);
+  color: var(--blanco);
+  border: none;
+  padding: 15px 23px;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: .25s;
+}
+
+.portada .boton:hover {
+  background: var(--oscuro);
+  transform: translateY(-3px);
+}
+
+.portada .boton-secundario {
+  background: var(--blanco);
+  color: var(--oscuro);
+  border: 1px solid #dce8e4;
+}
+
+/* =====================================
+   IMAGEN PRINCIPAL
+===================================== */
+
+.banner-imagen-repara {
+  width: 100%;
+  min-width: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background: var(--menta);
+  box-shadow: 0 18px 45px rgba(16, 45, 53, .10);
+}
+
+.banner-imagen-repara img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 24px;
+  transition: transform .35s ease;
+}
+
+.banner-imagen-repara:hover img {
+  transform: scale(1.02);
+}
+
+/* =====================================
+   TARJETAS Y ELEMENTOS
+===================================== */
 
 .tarjeta,
 .paso,
 .asistente-card,
 .modal {
-  box-shadow: 0 10px 28px rgba(24, 0, 94, .06);
+  box-shadow: 0 10px 28px rgba(16, 45, 53, .06);
 }
 
 .tarjeta,
@@ -1235,167 +1372,28 @@ textarea:focus {
   letter-spacing: .2px;
 }
 
+/* BOTÓN DE PAGO */
 
-/* =====================================
-   ACCESIBILIDAD Y ANIMACIONES
-===================================== */
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-  }
-}
-
-/* =====================================
-   BANNER PRINCIPAL REPARA YA
-===================================== */
-
-.banner-imagen-repara {
-  width: 100%;
-  max-width: 620px;
-  min-width: 0;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 24px;
-  background: transparent;
-}
-
-.banner-imagen-repara img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 22px;
-  filter: drop-shadow(0 18px 25px rgba(16, 45, 53, 0.13));
-  transition: transform 0.4s ease;
-}
-
-.banner-imagen-repara:hover img {
-  transform: scale(1.02);
-}
-
-/* =====================================
-   PORTADA PROFESIONAL
-===================================== */
-
-.portada {
-  position: relative;
-  overflow: hidden;
-  padding: 75px 0 65px;
-  background:
-    radial-gradient(circle at 90% 15%, #dff5ed 0%, transparent 35%),
-    #f7f8f2;
-}
-
-.portada-grid {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  align-items: center;
-  gap: 40px;
-}
-
-.portada-contenido {
-  position: relative;
-  z-index: 2;
-}
-
-.portada .etiqueta {
+.boton-pago {
+  background: var(--oscuro);
+  color: var(--blanco);
+  padding: 14px 22px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
   display: inline-flex;
   align-items: center;
-  gap: 9px;
-  background: #dff5ed;
-  color: #087e83;
-  padding: 10px 16px;
-  border-radius: 30px;
-  font-weight: 700;
-  font-size: 13px;
+  gap: 8px;
+  transition: .2s ease;
 }
 
-.portada h1 {
-  color: #102d35;
-  font-size: clamp(35px, 4.2vw, 55px);
-  line-height: 1.12;
-  letter-spacing: -1.8px;
-  margin: 24px 0;
-}
-
-.portada h1 span {
-  display: block;
-  color: #087e83;
-}
-
-.portada-contenido > p {
-  color: #637579;
-  font-size: 17px;
-  line-height: 1.8;
-  max-width: 520px;
-}
-
-.portada .acciones {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 13px;
-  margin-top: 28px;
-}
-
-.portada .boton {
-  background: #087e83;
-  color: #fff;
-  border: none;
-  padding: 15px 23px;
-  border-radius: 12px;
-  font-weight: 700;
-  transition: transform .25s, background .25s;
-}
-
-.portada .boton:hover {
-  background: #102d35;
-  transform: translateY(-3px);
-}
-
-.portada .boton-secundario {
-  background: #fff;
-  color: #102d35;
-  border: 1px solid #dce8e4;
+.boton-pago:hover {
+  background: var(--verde);
+  transform: translateY(-2px);
 }
 
 /* =====================================
-   ACABADOS GENERALES
-===================================== */
-
-::selection {
-  background: #087e83;
-  color: #fff;
-}
-
-:focus-visible {
-  outline: 3px solid #087e83;
-  outline-offset: 3px;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  border-color: #087e83 !important;
-  box-shadow: 0 0 0 3px #087e8320;
-  outline: none;
-}
-
-.tarjeta,
-.paso,
-.asistente-card,
-.modal {
-  box-shadow: 0 10px 28px rgba(16, 45, 53, .07);
-}
-
-/* =====================================
-   ADAPTACIÓN PARA TABLETS
+   TABLET
 ===================================== */
 
 @media (max-width: 850px) {
@@ -1423,16 +1421,27 @@ textarea:focus {
   }
 
   .banner-imagen-repara {
-    max-width: 620px;
-    margin: auto;
+    max-width: 650px;
   }
+
 }
 
 /* =====================================
-   ADAPTACIÓN PARA CELULARES
+   CELULARES
 ===================================== */
 
 @media (max-width: 550px) {
+
+  .logo-icono {
+    width: 43px;
+    height: 43px;
+    min-width: 43px;
+  }
+
+  .logo-texto {
+    font-size: 22px;
+    gap: 6px;
+  }
 
   .portada {
     padding: 40px 0;
@@ -1452,14 +1461,36 @@ textarea:focus {
     align-items: stretch;
   }
 
-  .portada .acciones button,
-  .portada .acciones a {
+  .portada .acciones a,
+  .portada .acciones button {
     width: 100%;
     text-align: center;
   }
 
   .banner-imagen-repara {
     width: 100%;
+    border-radius: 17px;
+  }
+
+  .banner-imagen-repara img {
+    border-radius: 17px;
+  }
+
+}
+
+/* =====================================
+   ACCESIBILIDAD Y MOVIMIENTO
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
   }
 
 }
