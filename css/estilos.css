@@ -65,6 +65,35 @@ nav {
   gap: 20px;
 }
 
+
+/* =====================================
+   LOGOTIPO PRINCIPAL REPARA YA
+===================================== */
+
+.logo-texto {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: fit-content;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.logo-img {
+  display: block;
+  width: 190px;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 550px) {
+  .logo-img {
+    width: 145px;
+  }
+}
+
 .logo-texto {
     display: flex !important;
     flex-direction: row !important;
@@ -1178,46 +1207,7 @@ footer h3 {
 
 
 
-/* =====================================
-   AJUSTES GENERALES REPARA YA
-===================================== */
 
-::selection {
-  background: var(--verde);
-  color: var(--blanco);
-}
-
-:focus-visible {
-  outline: 3px solid var(--verde);
-  outline-offset: 3px;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  border-color: var(--verde) !important;
-  box-shadow: 0 0 0 3px #087e8320;
-  outline: none;
-}
-
-/* =====================================
-   LOGO CASA + LLAVE
-===================================== */
-
-.logo-texto {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 9px;
-  width: fit-content;
-  color: var(--oscuro);
-  font-size: 25px;
-  font-weight: 800;
-  letter-spacing: -1px;
-  white-space: nowrap;
-  line-height: 1;
-}
 
 .logo-icono {
   display: block;
@@ -1532,44 +1522,3 @@ textarea:focus {
   }
 }
 
-    
-/* LOGOTIPO REPARA YA */
-
-.logo-texto {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  flex-shrink: 0;
-  color: var(--oscuro);
-  font-size: 25px;
-  font-weight: 800;
-  letter-spacing: -1px;
-  line-height: 1;
-  white-space: nowrap;
-}
-
-.logo-icono {
-  display: block;
-  width: 52px;
-  height: 52px;
-  min-width: 52px;
-  flex-shrink: 0;
-  color: var(--verde);
-}
-
-.logo-texto strong {
-  color: var(--verde);
-}
-
-@media (max-width: 550px) {
-  .logo-texto {
-    font-size: 21px;
-    gap: 6px;
-  }
-
-  .logo-icono {
-    width: 45px;
-    height: 45px;
-    min-width: 45px;
-  }
-}
