@@ -1264,6 +1264,193 @@ textarea:focus {
         width: 30%;
         margin: 10px auto 20px;
         border-radius: 12px;
+      
+/* =====================================
+   PORTADA PROFESIONAL REPARA YA
+===================================== */
+
+.portada {
+  position: relative;
+  overflow: hidden;
+  padding: 75px 0 65px;
+  background:
+    radial-gradient(circle at 90% 15%, #dff5ed 0%, transparent 35%),
+    #f7f8f2;
+}
+
+.portada-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: center;
+  gap: 35px;
+}
+
+.portada-contenido {
+  position: relative;
+  z-index: 2;
+}
+
+.portada .etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: #dff5ed;
+  color: #087e83;
+  padding: 10px 16px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.punto-activo {
+  width: 9px;
+  height: 9px;
+  background: #087e83;
+  border-radius: 50%;
+}
+
+.portada h1 {
+  color: #102d35;
+  font-size: clamp(35px, 4.2vw, 55px);
+  line-height: 1.12;
+  letter-spacing: -1.8px;
+  margin: 24px 0;
+}
+
+.portada h1 span {
+  display: block;
+  color: #087e83;
+}
+
+.portada-contenido > p {
+  color: #637579;
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 520px;
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 28px;
+}
+
+.portada .boton {
+  background: #087e83;
+  color: #fff;
+  border: none;
+  padding: 15px 23px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .25s, background .25s;
+}
+
+.portada .boton:hover {
+  background: #102d35;
+  transform: translateY(-3px);
+}
+
+.portada .boton-secundario {
+  background: #fff;
+  color: #102d35;
+  border: 1px solid #dce8e4;
+  text-decoration: none;
+}
+
+.portada-confianza {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 38px;
+  padding-top: 22px;
+  border-top: 1px solid #dce8e4;
+}
+
+.portada-confianza div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.portada-confianza strong {
+  color: #087e83;
+  font-size: 19px;
+}
+
+.portada-confianza span {
+  color: #637579;
+  font-size: 12px;
+}
+
+.banner-imagen-repara {
+  width: 100%;
+  min-width: 0;
+  position: relative;
+}
+
+.banner-imagen-repara img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 22px;
+  filter: drop-shadow(0 18px 25px rgba(16, 45, 53, .13));
+  transition: transform .4s ease;
+}
+
+.banner-imagen-repara:hover img {
+  transform: scale(1.025);
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+
+@media (max-width: 850px) {
+  .portada {
+    padding: 50px 0;
+  }
+
+  .portada-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .portada-contenido {
+    text-align: center;
+  }
+
+  .portada-contenido > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .acciones,
+  .portada-confianza {
+    justify-content: center;
+  }
+
+  .banner-imagen-repara {
+    max-width: 650px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .portada h1 {
+    font-size: 35px;
+  }
+
+  .portada-confianza {
+    gap: 14px;
+  }
+
+  .portada-confianza span {
+    font-size: 11px;
+  }
+}
+
     }
 }
   }
