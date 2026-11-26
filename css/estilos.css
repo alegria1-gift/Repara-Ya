@@ -1235,38 +1235,52 @@ textarea:focus {
   letter-spacing: .2px;
 }
 
+
+/* =====================================
+   ACCESIBILIDAD Y ANIMACIONES
+===================================== */
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
     scroll-behavior: auto !important;
-    transition-duration: .01ms !important;
-    animation-duration: .01ms !important;
-    /* BANNER PRINCIPAL REPARA YA */
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* =====================================
+   BANNER PRINCIPAL REPARA YA
+===================================== */
+
 .banner-imagen-repara {
-    width: min(500px, 50%);
-    margin: 25px auto 35px;
-    overflow: hidden;
-    border-radius: 24px;
-    background: var(--menta);
-    box-shadow: 0 18px 45px rgba(16, 45, 53, 0.10);
+  width: 100%;
+  max-width: 620px;
+  min-width: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 24px;
+  background: transparent;
 }
 
 .banner-imagen-repara img {
-    display: block;
-    width: 30%;
-    height: auto;
-    object-fit: contain;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 22px;
+  filter: drop-shadow(0 18px 25px rgba(16, 45, 53, 0.13));
+  transition: transform 0.4s ease;
 }
 
-@media (max-width: 200px) {
-    .banner-imagen-repara {
-        width: 30%;
-        margin: 10px auto 20px;
-        border-radius: 12px;
-      
+.banner-imagen-repara:hover img {
+  transform: scale(1.02);
+}
+
 /* =====================================
-   PORTADA PROFESIONAL REPARA YA
+   PORTADA PROFESIONAL
 ===================================== */
 
 .portada {
@@ -1280,9 +1294,9 @@ textarea:focus {
 
 .portada-grid {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
+  grid-template-columns: 0.9fr 1.1fr;
   align-items: center;
-  gap: 35px;
+  gap: 40px;
 }
 
 .portada-contenido {
@@ -1300,13 +1314,6 @@ textarea:focus {
   border-radius: 30px;
   font-weight: 700;
   font-size: 13px;
-}
-
-.punto-activo {
-  width: 9px;
-  height: 9px;
-  background: #087e83;
-  border-radius: 50%;
 }
 
 .portada h1 {
@@ -1329,9 +1336,10 @@ textarea:focus {
   max-width: 520px;
 }
 
-.acciones {
+.portada .acciones {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 13px;
   margin-top: 28px;
 }
@@ -1343,7 +1351,6 @@ textarea:focus {
   padding: 15px 23px;
   border-radius: 12px;
   font-weight: 700;
-  cursor: pointer;
   transition: transform .25s, background .25s;
 }
 
@@ -1356,58 +1363,43 @@ textarea:focus {
   background: #fff;
   color: #102d35;
   border: 1px solid #dce8e4;
-  text-decoration: none;
 }
 
-.portada-confianza {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 22px;
-  margin-top: 38px;
-  padding-top: 22px;
-  border-top: 1px solid #dce8e4;
+/* =====================================
+   ACABADOS GENERALES
+===================================== */
+
+::selection {
+  background: #087e83;
+  color: #fff;
 }
 
-.portada-confianza div {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+:focus-visible {
+  outline: 3px solid #087e83;
+  outline-offset: 3px;
 }
 
-.portada-confianza strong {
-  color: #087e83;
-  font-size: 19px;
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #087e83 !important;
+  box-shadow: 0 0 0 3px #087e8320;
+  outline: none;
 }
 
-.portada-confianza span {
-  color: #637579;
-  font-size: 12px;
+.tarjeta,
+.paso,
+.asistente-card,
+.modal {
+  box-shadow: 0 10px 28px rgba(16, 45, 53, .07);
 }
 
-.banner-imagen-repara {
-  width: 100%;
-  min-width: 0;
-  position: relative;
-}
-
-.banner-imagen-repara img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 22px;
-  filter: drop-shadow(0 18px 25px rgba(16, 45, 53, .13));
-  transition: transform .4s ease;
-}
-
-.banner-imagen-repara:hover img {
-  transform: scale(1.025);
-}
-
-/* ADAPTACIÓN PARA CELULARES */
+/* =====================================
+   ADAPTACIÓN PARA TABLETS
+===================================== */
 
 @media (max-width: 850px) {
+
   .portada {
     padding: 50px 0;
   }
@@ -1426,32 +1418,48 @@ textarea:focus {
     margin-right: auto;
   }
 
-  .acciones,
-  .portada-confianza {
+  .portada .acciones {
     justify-content: center;
   }
 
   .banner-imagen-repara {
-    max-width: 650px;
+    max-width: 620px;
     margin: auto;
   }
 }
 
-@media (max-width: 480px) {
+/* =====================================
+   ADAPTACIÓN PARA CELULARES
+===================================== */
+
+@media (max-width: 550px) {
+
+  .portada {
+    padding: 40px 0;
+  }
+
   .portada h1 {
     font-size: 35px;
+    letter-spacing: -1px;
   }
 
-  .portada-confianza {
-    gap: 14px;
+  .portada-contenido > p {
+    font-size: 15px;
   }
 
-  .portada-confianza span {
-    font-size: 11px;
+  .portada .acciones {
+    flex-direction: column;
+    align-items: stretch;
   }
-}
 
-    }
-}
+  .portada .acciones button,
+  .portada .acciones a {
+    width: 100%;
+    text-align: center;
   }
+
+  .banner-imagen-repara {
+    width: 100%;
+  }
+
 }
