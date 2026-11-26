@@ -1498,13 +1498,19 @@ textarea:focus {
    IMÁGENES DE SERVICIOS
 ===================================== */
 
+
+/* =====================================
+   IMÁGENES DE SERVICIOS
+===================================== */
+
 .servicio-imagen {
   width: 100%;
-  height: 210px;
+  height: 220px;
   overflow: hidden;
   border-radius: 16px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   background: var(--menta);
+  position: relative;
 }
 
 .servicio-imagen img {
@@ -1516,12 +1522,57 @@ textarea:focus {
   transition: transform .35s ease;
 }
 
-.servicio-imagen:hover img {
-  transform: scale(1.05);
+.tarjeta:hover .servicio-imagen img {
+  transform: scale(1.04);
 }
 
 @media (max-width: 550px) {
   .servicio-imagen {
-    height: 190px;
+    height: 210px;
+  }
+}
+
+    
+/* LOGOTIPO REPARA YA */
+
+.logo-texto {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+  color: var(--oscuro);
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.logo-icono {
+  display: block;
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  flex-shrink: 0;
+  color: var(--verde);
+}
+
+.logo-texto strong {
+  color: var(--verde);
+}
+
+@media (max-width: 550px) {
+  .logo-texto {
+    font-size: 21px;
+    gap: 6px;
+  }
+
+  .logo-icono {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+  }
+}
+
   }
 }
